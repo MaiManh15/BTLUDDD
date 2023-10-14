@@ -27,6 +27,7 @@ import com.google.firebase.database.FirebaseDatabase;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 
+import model.budgetData;
 import model.data;
 
 public class DashboardFragment extends Fragment {
@@ -185,17 +186,21 @@ public class DashboardFragment extends Fragment {
 
                 LocalDate today= LocalDate.now();
                 String mDate= formatDate(today);
+                String budgetId = dRBudgetDb.push().getKey();
+                budgetData budgetdata=null;
                 if(dataType.equals(income)) {
-
                     String id = dRIncomeDb.push().getKey();
                     data data = new data(floatAmount, type, note, id, mDate);
                     dRIncomeDb.child(id).setValue(data);
+                    budgetdata = new budgetData(budgetId, floatAmount);
                 }
                 if ((dataType.equals(expense))){
                     String id=  dRExpenseDb.push().getKey();
                     data data = new data(floatAmount, type,note, id, mDate);
                     dRExpenseDb.child(id).setValue(data);
+                    budgetdata = new budgetData(budgetId, -floatAmount);
                 }
+                dRBudgetDb.child(budgetId).setValue(budgetdata);
 
                 Toast.makeText(getActivity(), "Đã thêm dữ liệu!", Toast.LENGTH_SHORT).show();
                 ftAnimation();

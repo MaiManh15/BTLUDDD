@@ -47,6 +47,7 @@
                         android:textColor="@color/black"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:hint="đơn vị vnd"
                         android:id="@+id/amount_id"
                         android:textAppearance="?textAppearanceBodyLarge"/>
 
