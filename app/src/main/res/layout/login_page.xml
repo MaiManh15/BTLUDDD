@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:layout_gravity="center"
+    android:background="@drawable/background_color"
+    tools:context=".LoginPage">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="240dp"
+                android:layout_height="112dp"
+                android:layout_margin="10dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/logo_tieng_viet" />
+
+            <EditText
+                android:id="@+id/LoginPage_un"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:hint="email"
+                android:textSize="20dp"
+                android:textColorHint="@color/gray"
+                android:textColor="@color/black"
+                android:background="@drawable/edit_text_shape"
+                android:padding="15dp"/>
+
+            <EditText
+                android:id="@+id/LoginPage_pw"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:textSize="20dp"
+                android:hint="mật khẩu"
+                android:textColor="@color/black"
+                android:inputType="textPassword"
+                android:textColorHint="@color/gray"
+                android:background="@drawable/edit_text_shape"
+                android:padding="15dp"/>
+
+            <Button
+                android:id="@+id/LoginPage_LIbtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Đăng nhập"
+                android:background="@drawable/login_signup_button_shape"
+                app:backgroundTint="@null"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="70dp"
+                android:layout_marginRight="70dp"
+                android:textColor="@color/black"
+                android:textSize="18dp" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/LoginPage_FGPW"
+                    android:layout_width="211dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="16dp"
+                    android:paddingStart="20dp"
+                    android:text="Quên mật khẩu?"
+                    android:textAlignment="viewStart"
+                    android:textColor="@color/black"
+                    android:textSize="16dp" />
+
+                <TextView
+                    android:id="@+id/LoginPage_SU"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="16dp"
+                    android:text="Đăng ký"
+                    android:paddingEnd="20dp"
+                    android:textAlignment="viewEnd"
+                    android:textColor="@color/black"
+                    android:textSize="16dp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

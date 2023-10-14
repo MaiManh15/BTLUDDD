@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">BTL</string>
+
+    <string name="title">Quản lí Chi tiêu</string>
+
+    <string name="re_pass">nhập lại mật khẩu</string>
+    <string name="pass">mật khẩu</string>
+    <string name="email">email</string>
+    <string name="already_have_acc">Đã có tài khoản? Đăng nhập</string>
+    <string name="register">Đăng ký</string>
+    <string name="send_email">Đặt lại mật khẩu</string>
+    <string name="remember_acc">Bạn đã nhớ mật khẩu? Đăng nhập</string>
+
+    <string name="navigation_drawer_open">mở ngăn điều hướng</string>
+    <string name="navigation_drawer_close">đóng ngăn điều hướng</string>
+
+    <string name="income">Thu nhập</string>
+    <string name="expense">Chi tiêu</string>
+    <string name="dasboard">Trang chủ</string>
+
+    <string name="amount">Số tiền:</string>
+    <string name="type">Mô tả:</string>
+    <string name="note">Chú thích:</string>
+    <string name="cancel">Hủy</string>
+    <string name="save">Lưu</string>
+</resources>
