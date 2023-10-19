@@ -23,4 +23,6 @@
     <string name="note">Chú thích:</string>
     <string name="cancel">Hủy</string>
     <string name="save">Lưu</string>
+    <string name="update">Cập nhật</string>
+    <string name="delete">Xóa</string>
 </resources>

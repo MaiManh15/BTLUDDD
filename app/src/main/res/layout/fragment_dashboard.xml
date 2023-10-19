@@ -16,7 +16,8 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:background="@color/white">
 <!--title-->
             <LinearLayout
                 android:layout_width="match_parent"
@@ -80,7 +81,7 @@
                         android:textAppearance="?android:textAppearanceLarge"
                         android:textColor="@color/income_color"
                         android:id="@+id/income_set_result"
-                        android:text="999999d"/>
+                        android:text="0.0d"/>
 
 
                 </RelativeLayout>
@@ -98,7 +99,7 @@
                         android:textAppearance="?android:textAppearanceLarge"
                         android:textColor="@color/expense_color"
                         android:id="@+id/expense_set_result"
-                        android:text="9999d"/>
+                        android:text="0.0d"/>
 
 
                 </RelativeLayout>
@@ -107,7 +108,8 @@
 <!--budget-->
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
 
                 <RelativeLayout
                     android:layout_width="0dp"
@@ -120,10 +122,25 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textAppearance="?android:textAppearanceLarge"
+                        android:textColor="@color/black"
+                        android:text="Số dư:"/>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:gravity="center"
+                    android:background="@color/baby_blue">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:textAppearanceLarge"
                         android:id="@+id/budget_set_result"
                         android:textColor="@color/black"
-                        android:text="999999d"/>
-
+                        android:text="0.0d"/>
 
                 </RelativeLayout>
 
@@ -132,7 +149,8 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:id="@+id/suggest_bg">
 
                 <RelativeLayout
                     android:layout_width="0dp"
@@ -163,6 +181,47 @@
     <androidx.coordinatorlayout.widget.CoordinatorLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/income"
+                    android:textColor="@color/black"
+                    android:textAppearance="?android:textAppearanceLarge"
+                    android:padding="10dp"/>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:layout_width="match_parent"
+                    android:layout_height="170dp"
+                    android:id="@+id/recycler_income">
+                </androidx.recyclerview.widget.RecyclerView>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/expense"
+                    android:textColor="@color/black"
+                    android:textAppearance="?android:textAppearanceLarge"
+                    android:padding="10dp"/>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:layout_width="match_parent"
+                    android:layout_height="170dp"
+                    android:id="@+id/recycler_expense">
+                </androidx.recyclerview.widget.RecyclerView>
+
+            </LinearLayout>
+
+        </ScrollView>
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -247,7 +306,7 @@
             android:layout_marginRight="20dp"
             android:layout_marginBottom="16dp"
             android:backgroundTint="@color/baby_blue"
-            android:src="@drawable/income_add"
+            android:src="@drawable/floating_action"
             app:fabSize="normal"
             app:shapeAppearance="@null"
             android:contentDescription="action Button" />

@@ -12,4 +12,12 @@
         android:title="Chi tiêu"
         android:icon="@drawable/expense"/>
 
+    <item android:id="@+id/change_pass"
+        android:title="Đổi mật khẩu"
+        android:icon="@drawable/change_pass"/>
+
+    <item android:id="@+id/log_out"
+        android:title="Đăng xuất"
+        android:icon="@drawable/log_out"/>
+
 </menu>

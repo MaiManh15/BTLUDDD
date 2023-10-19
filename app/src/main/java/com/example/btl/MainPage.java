@@ -1,21 +1,22 @@
 package com.example.btl;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.ActionBarDrawerToggle;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.view.GravityCompat;
-import androidx.drawerlayout.widget.DrawerLayout;
-
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.widget.FrameLayout;
 
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.ActionBarDrawerToggle;
+import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+import androidx.core.view.GravityCompat;
+import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationView;
+import com.google.firebase.auth.FirebaseAuth;
 
 public class MainPage extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
@@ -26,6 +27,8 @@ public class MainPage extends AppCompatActivity implements NavigationView.OnNavi
     private IncomeFragment incomeFragment;
     private ExpenseFragment expenseFragment;
 
+    private FirebaseAuth fAuth;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -34,6 +37,8 @@ public class MainPage extends AppCompatActivity implements NavigationView.OnNavi
         Toolbar toolbar=findViewById(R.id.toolbar);
         toolbar.setTitle(R.string.title);
         setSupportActionBar(toolbar);
+
+        fAuth=FirebaseAuth.getInstance();
 
         dashboardFragment = new DashboardFragment();
         incomeFragment = new IncomeFragment();
@@ -105,7 +110,13 @@ public class MainPage extends AppCompatActivity implements NavigationView.OnNavi
             setFragment(expenseFragment);
             bottomNavigationView.setItemBackgroundResource(R.color.expense_color);
         }
-
+        if(itemID==R.id.change_pass){
+            startActivity(new Intent(getApplicationContext(), changePass.class));
+        }
+        if(itemID == R.id.log_out){
+            fAuth.signOut();
+            startActivity(new Intent(getApplicationContext(), LoginPage.class));
+        }
         if(fragment!=null){
             FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
             ft.replace(R.id.main_frame,fragment);

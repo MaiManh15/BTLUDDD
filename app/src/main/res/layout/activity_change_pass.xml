@@ -25,25 +25,8 @@
                 android:layout_margin="10dp"
                 android:layout_marginTop="20dp"
                 android:background="@drawable/logo_tieng_viet"/>
-
             <EditText
-                android:id="@+id/SignUpPage_un"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:layout_marginBottom="10dp"
-                android:layout_marginLeft="30dp"
-                android:layout_marginRight="30dp"
-                android:hint="@string/email"
-                android:maxLines="1"
-                android:textSize="20sp"
-                android:textColor="@color/black"
-                android:textColorHint="@color/gray"
-                android:background="@drawable/edit_text_shape"
-                android:padding="15dp"/>
-
-            <EditText
-                android:id="@+id/SignUpPage_pw"
+                android:id="@+id/change_pass_old_pw"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
@@ -51,7 +34,7 @@
                 android:layout_marginLeft="30dp"
                 android:layout_marginRight="30dp"
                 android:textSize="20sp"
-                android:hint="@string/pass"
+                android:hint="mật khẩu hiện tại"
                 android:maxLines="1"
                 android:textColor="@color/black"
                 android:inputType="textPassword"
@@ -60,7 +43,24 @@
                 android:padding="15dp" />
 
             <EditText
-                android:id="@+id/SignUpPage_cp"
+                android:id="@+id/change_pass_pw"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:textSize="20sp"
+                android:hint="mật khẩu mới"
+                android:maxLines="1"
+                android:textColor="@color/black"
+                android:inputType="textPassword"
+                android:textColorHint="@color/gray"
+                android:background="@drawable/edit_text_shape"
+                android:padding="15dp" />
+
+            <EditText
+                android:id="@+id/change_pass_cp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
@@ -76,28 +76,52 @@
                 android:background="@drawable/edit_text_shape"
                 android:padding="15dp"/>
 
-            <Button
-                android:id="@+id/SignUpPage_SUbtn"
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@drawable/login_signup_button_shape"
-                app:backgroundTint="@null"
-                android:text="@string/register"
-                android:textColor="@color/black"
-                android:layout_marginTop="15dp"
-                android:layout_marginLeft="70dp"
-                android:layout_marginRight="70dp"
-                android:textSize="18sp" />
-
-            <TextView
-                android:id="@+id/SignUpPage_SignIn"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="15dp"
-                android:text="@string/already_have_acc"
+                android:orientation="horizontal"
                 android:gravity="center"
-                android:textColor="@color/black"
-                android:textSize="16sp" />
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp">
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_margin="10dp"
+                    android:gravity="center"
+                    android:layout_height="wrap_content">
+
+                    <Button
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/login_signup_button_shape"
+                        app:backgroundTint="@null"
+                        android:textColor="@color/black"
+                        android:id="@+id/button_cancel"
+                        android:textAppearance="?textAppearanceBodyLarge"
+                        android:text="@string/cancel"/>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_margin="10dp"
+                    android:gravity="center"
+                    android:layout_height="wrap_content">
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/login_signup_button_shape"
+                    app:backgroundTint="@null"
+                    android:textColor="@color/black"
+                    android:id="@+id/change_button"
+                    android:textAppearance="?textAppearanceBodyLarge"
+                    android:text="Đổi mật khẩu"/>
+
+                </RelativeLayout>
+
+            </LinearLayout>
 
         </LinearLayout>
 

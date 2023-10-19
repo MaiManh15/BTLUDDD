@@ -15,6 +15,7 @@
         android:elevation="10dp">
 
         <LinearLayout
+            android:background="@color/white"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
@@ -47,7 +48,7 @@
                     android:layout_height="wrap_content"
                     android:textAppearance="?android:textAppearanceMedium"
                     android:textColor="@color/black"
-                    android:text="999999d"
+                    android:text="0.0d"
                     android:id="@+id/income_txt"/>
 
             </RelativeLayout>
@@ -60,9 +61,6 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:id="@+id/recycler_income_id">
-
-
-
     </androidx.recyclerview.widget.RecyclerView>
 
 </LinearLayout>
