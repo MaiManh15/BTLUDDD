@@ -1,8 +1,5 @@
 package com.example.btl;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.app.AlertDialog;
 import android.content.Intent;
 import android.os.Bundle;
@@ -12,6 +9,9 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
@@ -63,6 +63,10 @@ public class LoginPage extends AppCompatActivity {
 
                 if(TextUtils.isEmpty(LIusername)){
                     username.setError("yêu cầu email!");
+                    return;
+                }
+                if(pass.length()<6){
+                    password.setError("mật khẩu phải lớn hơn hoặc bằng 6 ký tự!");
                     return;
                 }
                 if(TextUtils.isEmpty(pass)){

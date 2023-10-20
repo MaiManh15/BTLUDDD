@@ -56,8 +56,16 @@ public class changePass extends AppCompatActivity {
                     oldPass.setError("yêu cầu mật khẩu cũ!");
                     return;
                 }
+                if(oldPassword.length()<6){
+                    oldPass.setError("mật khẩu phải lớn hơn hoặc bằng 6 ký tự!");
+                    return;
+                }
                 if(TextUtils.isEmpty(password)) {
                     pass.setError("yêu cầu mật khẩu mới!");
+                    return;
+                }
+                if(password.length()<6){
+                    oldPass.setError("mật khẩu phải lớn hơn hoặc bằng 6 ký tự!");
                     return;
                 }
                 if(TextUtils.isEmpty(rePassword)){

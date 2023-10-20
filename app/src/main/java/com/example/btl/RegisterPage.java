@@ -67,6 +67,10 @@ public class RegisterPage extends AppCompatActivity {
                     password.setError("yêu cầu mật khẩu!");
                     return;
                 }
+                if(pass.length()<6){
+                    password.setError("mật khẩu phải lớn hơn hoặc bằng 6 ký tự!");
+                    return;
+                }
 
                 if(pass.equals(cfpass)){
                     OptionDialog.setMessage("Đang chạy..");
