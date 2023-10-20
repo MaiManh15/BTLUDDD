@@ -24,7 +24,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="29/02/2000"
+                android:text="00/00/0000"
                 android:textColor="@color/black"
                 android:textAppearance="?android:textAppearanceSmall"
                 android:id="@+id/expense_date_txt"
@@ -67,7 +67,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="999999d"
+                android:text="0.0d"
                 android:textColor="@color/expense_color"
                 android:textAppearance="?android:textAppearanceSmall"
                 android:id="@+id/expense_amount_txt"

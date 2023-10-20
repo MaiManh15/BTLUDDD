@@ -61,6 +61,7 @@ public class IncomeFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View myview= inflater.inflate(R.layout.fragment_income, container, false);
+
         incomeTotalSum=myview.findViewById(R.id.income_txt);
 
         FirebaseAuth fAuth = FirebaseAuth.getInstance();
@@ -106,37 +107,37 @@ public class IncomeFragment extends Fragment {
     public void onStart() {
         super.onStart();
 
-        options = new FirebaseRecyclerOptions.Builder<data>()
-                .setQuery(dRIncomeDb, data.class)
-                .build();
+            options = new FirebaseRecyclerOptions.Builder<data>()
+                    .setQuery(dRIncomeDb, data.class)
+                    .build();
+            adapter = new FirebaseRecyclerAdapter<data, myViewHolder>(options) {
 
-        adapter = new FirebaseRecyclerAdapter<data, myViewHolder>(options) {
+                @NonNull
+                public myViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+                    return new myViewHolder(LayoutInflater.from(parent.getContext()).inflate(R.layout.recycler_income_data, parent, false));
+                }
 
-            @NonNull
-            public myViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-                return new myViewHolder(LayoutInflater.from(parent.getContext()).inflate(R.layout.recycler_income_data, parent, false));
-            }
+                @RequiresApi(api = Build.VERSION_CODES.O)
+                protected void onBindViewHolder(@NonNull myViewHolder holder, @SuppressLint("RecyclerView") int position, @NonNull data model) {
+                    holder.setAmount(model.getAmount());
+                    holder.setType(model.getType());
+                    holder.setNote(model.getNote());
+                    holder.setDate(model.getDate());
 
-            @RequiresApi(api = Build.VERSION_CODES.O)
-            protected void onBindViewHolder(@NonNull myViewHolder holder, @SuppressLint("RecyclerView") int position, @NonNull data model) {
-                holder.setAmount(model.getAmount());
-                holder.setType(model.getType());
-                holder.setNote(model.getNote());
-                holder.setDate(model.getDate());
+                    holder.mView.setOnClickListener(view -> {
 
-                holder.mView.setOnClickListener(view -> {
+                        post_key=getRef(position).getKey();
 
-                    post_key=getRef(position).getKey();
+                        type= model.getType();
+                        note=model.getNote();
+                        amount=model.getAmount();
+                        updateDataItem();
+                    });
+                }
+            };
+            adapter.startListening();
+            recyclerView.setAdapter(adapter);
 
-                    type= model.getType();
-                    note=model.getNote();
-                    amount=model.getAmount();
-                    updateDataItem();
-                });
-            }
-        };
-        adapter.startListening();
-        recyclerView.setAdapter(adapter);
     }
 
     public static class myViewHolder extends RecyclerView.ViewHolder{
