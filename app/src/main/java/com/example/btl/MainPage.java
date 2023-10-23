@@ -36,6 +36,7 @@ public class MainPage extends AppCompatActivity implements NavigationView.OnNavi
 
         Toolbar toolbar=findViewById(R.id.toolbar);
         toolbar.setTitle(R.string.title);
+
         setSupportActionBar(toolbar);
 
         fAuth=FirebaseAuth.getInstance();

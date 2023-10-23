@@ -8,14 +8,21 @@
     <com.google.android.material.appbar.AppBarLayout
         android:id="@+id/topbar"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        app:itemTextColor="@color/black"
+        app:itemIconTint="@color/black"
+        app:tint="@android:color/black">
         
         <androidx.appcompat.widget.Toolbar
             android:id="@+id/toolbar"
             app:titleTextColor="@color/black"
             android:background="@drawable/background_color"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:theme="@style/Apptheme"
+            app:itemTextColor="@color/black"
+            app:itemIconTint="@color/black"
+            app:tint="@android:color/black">
 
         </androidx.appcompat.widget.Toolbar>
 

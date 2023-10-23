@@ -217,6 +217,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="170dp"
                     android:id="@+id/recycler_expense">
+
                 </androidx.recyclerview.widget.RecyclerView>
 
             </LinearLayout>
@@ -255,6 +256,9 @@
                 android:visibility="invisible"
                 app:pressedTranslationZ="12dp"
                 android:src="@drawable/expense_add"
+                app:itemTextColor="@color/black"
+                app:itemIconTint="@color/black"
+                app:tint="@android:color/black"
                 app:shapeAppearance="@null"/>
 
         </LinearLayout>
@@ -291,6 +295,9 @@
                 android:visibility="invisible"
                 app:pressedTranslationZ="12dp"
                 android:src="@drawable/income_add"
+                app:itemTextColor="@color/black"
+                app:itemIconTint="@color/black"
+                app:tint="@android:color/black"
                 app:shapeAppearance="@null">
 
 
@@ -309,6 +316,9 @@
             android:src="@drawable/floating_action"
             app:fabSize="normal"
             app:shapeAppearance="@null"
+            app:itemTextColor="@color/black"
+            app:itemIconTint="@color/black"
+            app:tint="@android:color/black"
             android:contentDescription="action Button" />
 
     </androidx.coordinatorlayout.widget.CoordinatorLayout>

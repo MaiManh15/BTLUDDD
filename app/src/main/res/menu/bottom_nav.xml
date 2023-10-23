@@ -11,5 +11,5 @@
 
     <item android:id="@+id/expense"
         android:title="Chi tiêu"
-        android:icon="@drawable/expense"/>
+        android:icon="@drawable/expense" />
 </menu>
