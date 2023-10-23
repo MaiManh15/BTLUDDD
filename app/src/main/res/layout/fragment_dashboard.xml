@@ -196,13 +196,15 @@
                     android:layout_height="wrap_content"
                     android:text="@string/income"
                     android:textColor="@color/black"
+                    android:background="@color/bg"
                     android:textAppearance="?android:textAppearanceLarge"
                     android:padding="10dp"/>
 
                 <androidx.recyclerview.widget.RecyclerView
                     android:layout_width="match_parent"
                     android:layout_height="170dp"
-                    android:id="@+id/recycler_income">
+                    android:id="@+id/recycler_income"
+                    android:background="@color/bg">
                 </androidx.recyclerview.widget.RecyclerView>
 
                 <TextView
@@ -210,13 +212,15 @@
                     android:layout_height="wrap_content"
                     android:text="@string/expense"
                     android:textColor="@color/black"
+                    android:background="@color/bg"
                     android:textAppearance="?android:textAppearanceLarge"
                     android:padding="10dp"/>
 
                 <androidx.recyclerview.widget.RecyclerView
                     android:layout_width="match_parent"
                     android:layout_height="170dp"
-                    android:id="@+id/recycler_expense">
+                    android:id="@+id/recycler_expense"
+                    android:background="@color/bg">
 
                 </androidx.recyclerview.widget.RecyclerView>
 
