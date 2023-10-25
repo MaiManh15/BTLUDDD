@@ -11,6 +11,7 @@ android {
     defaultConfig {
         applicationId = "com.example.btl"
         minSdk = 24
+        minSdkVersion(24)
         targetSdk = 33
         versionCode = 1
         versionName = "1.0"
