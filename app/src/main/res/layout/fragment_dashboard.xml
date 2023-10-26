@@ -204,7 +204,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="170dp"
                     android:id="@+id/recycler_income"
-                    android:background="@color/bg">
+                    android:background="@color/bg"
+                    tools:listitem="@layout/dashboard_income">
                 </androidx.recyclerview.widget.RecyclerView>
 
                 <TextView
@@ -220,7 +221,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="170dp"
                     android:id="@+id/recycler_expense"
-                    android:background="@color/bg">
+                    android:background="@color/bg"
+                    tools:listitem="@layout/dashboard_expense">
 
                 </androidx.recyclerview.widget.RecyclerView>
 

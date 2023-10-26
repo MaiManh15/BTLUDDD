@@ -62,7 +62,8 @@
     <androidx.recyclerview.widget.RecyclerView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:id="@+id/recycler_income_id">
+        android:id="@+id/recycler_income_id"
+        tools:listitem="@layout/recycler_income_data">
     </androidx.recyclerview.widget.RecyclerView>
 
 </LinearLayout>
