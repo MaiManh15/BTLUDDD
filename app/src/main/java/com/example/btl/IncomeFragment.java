@@ -74,7 +74,7 @@ public class IncomeFragment extends Fragment {
 
         recyclerView=myview.findViewById(R.id.recycler_income_id);
 
-        LinearLayoutManager layoutManager= new LinearLayoutManager(getActivity());
+        LinearLayoutManager layoutManager= new LinearLayoutManager(getActivity(), LinearLayoutManager.VERTICAL, false);
 
         layoutManager.setReverseLayout(true);
         layoutManager.setStackFromEnd(true);
